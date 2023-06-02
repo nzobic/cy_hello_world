@@ -2,11 +2,14 @@ import {Given, When, Then} from 'cypress-cucumber-preprocessor/steps';
 const HomePage = require ('../../pages/HomePage.cy');
 
 Given ("I am on {string}", (url) => {
+  cy.viewport(1920,1080)
   cy.visit(url)
+  HomePage.clickAcceptCookies()
 });
 
-When ("I select {string} from menu", () => {
-
+When ("From menu {string} I select {string}", (menu, submenu) => {
+  HomePage.selectCategoryFromMenu(menu, submenu)
+  cy.url().should('include', 'qa')
 });
 
 When ("I search by IT technology {string}", () => {

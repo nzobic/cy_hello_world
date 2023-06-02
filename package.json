@@ -15,5 +15,8 @@
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
     "stepDefinitions": "./cypress/e2e/"
+  },
+  "devDependencies": {
+    "cypress-xpath": "^2.0.1"
   }
 }
