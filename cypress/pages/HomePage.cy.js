@@ -13,6 +13,7 @@ class HomePage {
         cy.get("#$-submenu".replace('$', menu)).invoke('show')
         cy.get("#$-submenu".replace('$', menu)).contains(submenu).click()
     }
+    
 }
 
 module.exports = new HomePage();
