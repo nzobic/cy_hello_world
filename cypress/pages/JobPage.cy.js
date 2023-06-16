@@ -7,7 +7,7 @@ class JobPage {
         seniorityOption: () => cy.get('[name="senioritet[]"]'),
         //sorting: () => cy.get('[class*="search_sort"] span'),
         sorting: () => cy.get('.__search-title-and-sort button'),
-        tags: () => cy.get('.__search-results div.relative div.flex-wrap'),
+        tags: () => cy.get('.flex.items-center.gap-2.flex-wrap'),
         jobTitle: () => cy.get('.__search-results div.relative h3 a')
     }
 

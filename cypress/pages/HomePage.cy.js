@@ -10,7 +10,7 @@ class HomePage {
     }
 
     selectCategoryFromMenu(menu, submenu) {
-        cy.get("#$-submenu".replace('$', menu)).invoke('show')
+        cy.get("#$-submenu".replace('$', menu)).invoke('show').should('be.visible')
         cy.get("#$-submenu".replace('$', menu)).contains(submenu).click()
     }
     
